@@ -1,1 +1,70 @@
+#reset-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #0066ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #999;
+  margin-top: 20px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0 auto; /* Center the button horizontally */
+}
 
+/* Add hover effect for the reset button */
+#reset-button:hover {
+  background-color: #003399;
+}
+
+body {
+  background-color: #BEBEBE;
+}
+
+/* CSS styles for the game board and cells */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px; /* Adds space between the cells */
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  margin: 20px auto; /* Center the board horizontally */
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  user-select: none;
+  border: solid #000 2px;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px #999;
+  border-radius: 5px;
+}
+
+/* Add some hover effects for the cells */
+.cell:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* Add animation when the cell is selected */
+.cell.selected {
+  animation: cell-selected 0.5s ease-in;
+}
+
+@keyframes cell-selected {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
